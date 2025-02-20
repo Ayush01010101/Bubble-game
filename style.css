@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    min-height: 100vh;
+   
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.container {
+    box-shadow: 10px 10px 36px #bebebe,
+    -18px -18px 36px #ffffff;
+
+    border-radius: 20px;
+    gap:10px;;
+    /* border: 2px solid red; */
+    min-height: 50vh;
+    /* justify-content: center; */
+    /* align-items: center; */
+    display: flex;
+    padding: 30px;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    width: 90%;
+}
+
+.container>.bubble {
+    font-size: larger;
+    /* font-weight: bold; */
+    background-color: rgb(24, 94, 24);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    border-radius: 50%;
+    height: 7vh;
+    /* border:2px solid blue; */
+    width: 7vh;
+    margin: 5px;
+    cursor: pointer;
+    
+    /* border: 2px solid green; */
+}
+
+.options {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* border: 2px solid black; */
+    padding: 30px;
+    align-items: center;
+    /* justify-content: center; */
+
+}
+
+.options>span,select {
+    padding: 10px;
+    border: none;
+    outline: none;
+    /* border: 2px solid green; */
+    border-radius: 10px;
+    background: #e0e0e0;
+    box-shadow: 10px 10px 36px #bebebe,
+        -18px -18px 36px #ffffff;
+
+    cursor: pointer;
+
+}
+
+.start{
+    padding: 10px 30px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+.countdown{
+    position:absolute;
+    top: 0;
+    border: 2px solid blue;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    font-size: 300px;
+    color:black;
+    display: none;
+}
+.restart{
+    display: none;
+    padding: 10px 30px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+@media(max-width:600px){
+    .container>.bubble{
+        width: 5vh;
+        height: 5vh;
+    }
+
+    .container{
+        justify-content: center;
+    }
+}
+
