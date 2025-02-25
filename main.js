@@ -65,17 +65,26 @@ function GenerateRandomNumber(x = 0, y = 1) {
 
 function makeBubble(x = 2) {
 
-    
+    let array=[]
 
     container.innerHTML = '';
     for (let i = 0; i < x; i++) {
         
         const element = document.createElement("div");
         element.setAttribute("class", "bubble");
-        element.innerHTML = GenerateRandomNumber(1, 10); // set some random number in the innerhtml
-        
+        const random=GenerateRandomNumber(1, 10);
+        element.innerHTML = random // set some random number in the innerhtml
+
+        if(!array.includes(random)){
+
+            array=[...array,random]
+        }
         container.appendChild(element);
     }
+
+    array.sort();
+
+    
 }
 
 async function startGame() {
